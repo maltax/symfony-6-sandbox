@@ -5,7 +5,7 @@ symfony-6-sandbox Symfony application
 
 1. Add `symfony-6-sandbox.local` to the `hosts` of your system
 2. Copy `.env.dist` to `.env` and modify which `docker-compose.yml` files to use
-3. Copy `app/.env.local.dist` to `app/.env.local` and modify accordingly
+3. Create an`app/.env.local` and modify accordingly
 4. Run `docker-compose up -d`
 5. Install Symfony `docker-compose exec php composer create-project symfony/skeleton:"6.4.*"`
 6. Open `http://symfony-6-sandbox.local`
