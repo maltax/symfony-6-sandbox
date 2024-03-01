@@ -13,7 +13,7 @@ RUN deluser --remove-home www-data && \
 RUN apk add --update --no-cache ${PHPIZE_DEPS} git bash curl
 
 # ZIP module
-RUN apk add --no-cache libzip-dev && docker-php-ext-configure zip && docker-php-ext-install zip
+RUN apk add --no-cache libzip-dev && docker-php-ext-configure zip && docker-php-ext-install zip pdo pdo_mysql
 
 # XDebug from PECL
 RUN pecl install xdebug-3.1.5
