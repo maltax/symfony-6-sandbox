@@ -10,6 +10,11 @@ symfony-6-sandbox Symfony application
 5. Install Symfony `docker-compose exec -w /var/www php composer create-project symfony/skeleton:"6.4.*" html`
 6. Re-Open `http://symfony-6-sandbox.local` and enjoy!
 
+Optional : **Setup database**
+ - Execute : `composer require symfony/orm-pack && composer require --dev symfony/maker-bundle`
+ - Add this to your env.local : `DATABASE_URL="mysql://root:hello@symfony-6-sandbox-db-1:3306/app_db"`
+ - You should be able to create new entity into our db: `bin/console make:entity` `bin/console make:migration` `bin/console doctrine:migration:migrate`
+
 ## Stopping
 
 `docker-compose down`
